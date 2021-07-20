@@ -1,0 +1,91 @@
+// Colors
+$green        : #4CD964;
+$cyan         : #5AC8FA;
+$blue         : #007AFF;
+$purple       : #5856D6;
+$magenta      : #FF2D70;
+$red          : #FF3B30;
+$orange       : #FF9500;
+$yellow       : #FFCC00;
+$gray         : #8E8E93;
+$grass        : #8bc34a;
+$sky-blue     : #1BADF8;
+$light-purple : #CC73E1;
+$brown        : #A2845E;
+
+$about-subtitle: #D1D5DA;
+
+// Background Color
+$bg-list-active : #fff3df;
+$bg-light       : #f5f5f5;
+$bg-navbar      : #373737;
+$bg-menu        : #4A4A4A;
+$bg-searchbar   : #E5E5EA;
+$bg-share       : #FFFDF8;
+
+// Border
+$color-border           : #E5E5EA;
+$color-border-highlight : darken($color-border, 15%);
+$color-border-share     : #F0E8DB;
+$color-border-menu      : #757575;
+
+// Radius
+$radius-mobile: 5px;
+$radius-pc: 10px;
+
+// Font size
+$fz-list-header  : 20px;
+$fz-list-content : 14px;
+$fz-note         : 14px;
+$fz-big          : 18px;
+
+// Color text
+$color-text-label         : #9B9B9B;
+$color-text-content       : #373737;
+$color-text-title         : #232323;
+$color-text-date          : #2d2d2d;
+$color-text-menu-second   : $about-subtitle;
+
+// Height
+$height-header       : 40px;
+$height-list         : 28px;
+$height-loading      : 30px;
+$height-navbar       : 45px;
+
+// Width
+$width-category-sign : 3px;
+$width-index-date    : 25px;
+
+// Grid
+$grid-separate-width-xs: 375px;
+$grid-separate-width-sm: 768px;
+$grid-separate-width-md: 1024px;
+$grid-separate-width-big : 1366px;
+$grid-separate-width-max : 1440px;
+
+
+$menu-panel-sm: 400px;
+$menu-panel-big: 500px;
+
+// Z-index
+$z-toast  : 500;
+$z-mask   : 300;
+$z-navbar : 200;
+$z-header : 100;
+
+
+$categories: (
+    "life"     : $orange,
+    "study"    : $green,
+    "bigevent" : $red,
+    "sport"    : $yellow,
+    "week"     : $purple,
+    "work"     : $blue,
+    "game"     : $cyan,
+    "film"     : $magenta,
+    "article"  : $light-purple,
+    "gray"     : $gray,
+    "grass"    : $grass,
+);
+
+$weathers: ("sunny", "cloudy", "overcast", "fog", "sprinkle", "rain", "thunderstorm", "snow",);
