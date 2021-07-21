@@ -1,32 +1,37 @@
 <template>
-    <el-table
-        data="codeDict"
-    >
-        <el-table-column prop="code" label="编码"></el-table-column>
-        <el-table-column prop="word" label="词条"></el-table-column>
-        <el-table-column label="操作">
-            <template slot-scope="scope">
-                <el-button type="primary">上移</el-button>
-                <el-button type="primary">下移</el-button>
-                <el-button type="primary">编辑</el-button>
-                <el-button type="danger">删除</el-button>
-            </template>
-        </el-table-column>
+    <div class="container-fluid">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">code</th>
+                <th scope="col">word</th>
+            </tr>
+            </thead>
 
-    </el-table>
+            <tbody>
+            <tr v-for="(item, index) in codeDict" :key="index">
+                <th scope="row">{{ index }}</th>
+                <td>{{ item.code }}</td>
+                <td>{{ item.word }}</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
 </template>
 
 <script>
 export default {
     name: "DictUser",
-    data(){
+    data() {
         return {
-            codeDict: []
+            codeDict: [
+                {code: 'ggtt', word: '五笔'},
+                {code: 'ggtt', word: '来来往往'},
+                {code: 'ggtt', word: '开玩笑'},
+            ]
         }
     }
 }
 </script>
-
-<style scoped>
-
-</style>
