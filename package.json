@@ -11,7 +11,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "start": "electron-forge start",
+    "start": "vue-cli-service build && electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
@@ -22,7 +22,8 @@
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0",
-    "bootstrap": "^5.0.2"
+    "bootstrap": "^5.0.2",
+    "fs-extra": "^10.0.0"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.58",

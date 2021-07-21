@@ -1,4 +1,4 @@
-const {app, BrowserWindow, Menu} = require('electron');
+const {app, BrowserWindow, Menu, ipcMain, ipcRenderer} = require('electron');
 
 const url = require("url");
 const path = require("path");
@@ -7,10 +7,12 @@ let mainWindow
 
 function createWindow() {
     mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 1200,
+        height: 800,
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            enableRemoteModule: true,
+            preload: path.join(__dirname, './src/preload.js'),
         }
     })
 
@@ -20,10 +22,12 @@ function createWindow() {
             protocol: "file:",
             slashes: true
         })
-    );
+    )
     mainWindow.on('closed', function () {
         mainWindow = null
     })
+
+    mainWindow.webContents.openDevTools()
 }
 
 function createMenu() {
@@ -62,4 +66,8 @@ app.on('activate', function () {
     if (mainWindow === null) {
         createWindow()
     }
+})
+
+ipcMain.on('read-file', event => {
+    console.log(event)
 })
